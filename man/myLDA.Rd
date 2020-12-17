@@ -4,14 +4,14 @@
 \alias{myLDA}
 \title{LDA method to predict test set using R}
 \usage{
-myLDA(train_X, train_y, test_x)
+myLDA(train_x, train_y, test_x)
 }
 \arguments{
+\item{train_x}{the properties of the train set}
+
 \item{train_y}{the lables of the train set}
 
 \item{test_x}{the test set to be predicted}
-
-\item{train_x}{the properties of the train set}
 }
 \value{
 a label for test set

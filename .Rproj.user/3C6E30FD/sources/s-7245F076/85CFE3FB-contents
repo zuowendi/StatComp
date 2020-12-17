@@ -1,0 +1,9 @@
+library(StatComp)
+data("iris")
+X = as.matrix(subset(iris,Species == "setosa" | Species == "versicolor")[1:4])
+y = append(rep(0,50), rep(1,50))
+ypred1 <- myKNN(X, y,test_x = X, k = 5)
+table(ypred1, y)
+
+ypred2 <- myLDA(X, y,test_x = X)
+table(ypred2$ypred, y)
